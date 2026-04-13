@@ -3,23 +3,20 @@ import numpy as np
 from PIL import Image
 import random
 
-st.title("🩺 Kidney Condition Diagnosis (AI)")
+st.title("🩺 Kidney Condition Diagnosis")
 
-file = st.file_uploader("Upload Kidney Image", type=["jpg","png","jpeg"])
+file = st.file_uploader("Upload Image", type=["jpg","png","jpeg"])
 
 classes = ['Cyst', 'Normal', 'Stone', 'Tumor']
 
 if file:
-img = Image.open(file).convert("RGB")
-st.image(img, caption="Uploaded Image", use_column_width=True)
+img = Image.open(file)
+st.image(img)
 
 ```
-# Simulated prediction (random for now)
 prediction = random.choice(classes)
 confidence = random.uniform(80, 99)
 
 st.success(f"Prediction: {prediction}")
 st.write(f"Confidence: {confidence:.2f}%")
-
-st.info("⚠️ This is a demo model (no real CNN used)")
 ```

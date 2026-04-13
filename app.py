@@ -10,7 +10,7 @@ file = st.file_uploader("Upload Image", type=["jpg","png","jpeg"])
 classes = ['Cyst', 'Normal', 'Stone', 'Tumor']
 
 if file:
-img = Image.open(file)
+img =    Image.open(file)
 st.image(img)
 
 ```

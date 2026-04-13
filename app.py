@@ -10,7 +10,7 @@ file = st.file_uploader("Upload Image", type=["jpg","png","jpeg"])
 classes = ['Cyst', 'Normal', 'Stone', 'Tumor']
 
 if file:
-img = Image.open(file)
+img = Image.open(file)   # ✅ properly indented
 st.image(img)
 
 ```
@@ -20,3 +20,4 @@ confidence = random.uniform(80, 99)
 st.success(f"Prediction: {prediction}")
 st.write(f"Confidence: {confidence:.2f}%")
 ```
+
